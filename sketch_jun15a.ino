@@ -15,11 +15,11 @@ void loop() {
   value2 = analogRead(A1);
   value3 = analogRead(A2);
   value4 = analogRead(A3);
-  myExcel.writeIndexed("flexdata", idx, 1,idx);    // write %date% (that will be converted in current date) to worksheet 'Example' row 'idx+11' column '1' 
-   myExcel.writeIndexed("flexdata", idx, 2,value1);    // write %time% (that will be converted in current time) to worksheet 'Example' row 'idx+11' column '2' 
-    myExcel.writeIndexed("flexdata", idx, 3,value2);        // write idx to worksheet 'Example' row 'idx+11' column '3' 
-    myExcel.writeIndexed("flexdata", idx, 4,value3);      // write the value from A0 pin to worksheet 'Example' row 'idx+11' column '4' with two digits as decimals
-    myExcel.writeIndexed("flexdata", idx, 5,value4);    // write a random value to worksheet 'Example' row 'idx+11' column '5' with two digits as decimals
+  myExcel.writeIndexed("flexdata", idx, 1,idx);    //  write idx to worksheet 'flexdata' row 'idx' column '1'
+   myExcel.writeIndexed("flexdata", idx, 2,value1);    // write idx to worksheet 'flexdata' row 'idx' column '2'
+    myExcel.writeIndexed("flexdata", idx, 3,value2);        // write idx to worksheet 'flexdata' row 'idx' column '3' 
+    myExcel.writeIndexed("flexdata", idx, 4,value3);      // write idx to worksheet 'flexdata' row 'idx' column '4'
+    myExcel.writeIndexed("flexdata", idx, 5,value4);    // write idx to worksheet 'flexdata' row 'idx' column '5'
     idx++;
   Serial.print(value1);
   Serial.print("\t");
